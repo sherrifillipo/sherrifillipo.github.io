@@ -1,6 +1,11 @@
 h2 {
   color: #00ccff;
-  font-family: "Arial", sans-serif;
+  font-family: "Circular","Arial", sans-serif;
+}
+
+h3 {
+  color: #318880;
+  font-family: cursive;
 }
 
 p {
