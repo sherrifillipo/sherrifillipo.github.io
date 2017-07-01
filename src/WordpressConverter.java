@@ -31,7 +31,7 @@ public class WordpressConverter {
      * Sets the file name to be used for parsing and conversion
      * @param filename
      */
-    public setFileName(String filename){
+    public void setFileName(String filename) {
         this.filename = filename;
     }
 }
