@@ -26,4 +26,12 @@ public class WordpressConverter {
      * Use
      */
     public WordpressConverter(){}
+
+    /**
+     * Sets the file name to be used for parsing and conversion
+     * @param filename
+     */
+    public setFileName(String filename){
+        this.filename = filename;
+    }
 }
