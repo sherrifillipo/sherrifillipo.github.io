@@ -73,7 +73,7 @@ public class WordpressConverter {
         int posEnd = 0;
         String subtag;
 
-        while(posStart != fileContent.length()){
+        while(posStart < fileContent.length()){
 
             //Start by finding the start and end positions of the tag
             if(fileContent.charAt(posStart) == '<'){
