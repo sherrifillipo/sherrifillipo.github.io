@@ -46,7 +46,13 @@ public class FileHandler {
             return false;
         }
 
-        content = readFile.next();
+        //contentBuff = new StringBuffer();
+
+        while(readFile.hasNextLine()){
+            content = content + readFile.nextLine();
+            //contentBuff.append(readFile.nextLine());
+        }
+
         checked = true;
 
         return true;
