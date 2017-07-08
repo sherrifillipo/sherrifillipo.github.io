@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -27,11 +28,19 @@ public class FileHandler {
         parseXMLtoHTML();
     }
 
+    public void setFileName(String fileName){
+        this.filename = fileName;
+    }
+
+    public String getFileName(){
+        return filename;
+    }
+
     /**
      * Checks the file for appropriate formatting
      * @return non-null Exception if an error is encountered during parsing
      */
-    public Exception parseXMLtoHTML(){
+    public void parseXMLtoHTML(){
 
         local = new File(filename);
         Scanner readFile;
@@ -40,15 +49,15 @@ public class FileHandler {
             readFile = new Scanner(local);
         } catch(FileNotFoundException fnfe){
             System.out.println("Provided filename does not exist.");
-            return fnfe;
+            return;
         } catch(Exception exc){
             System.out.println("Encountered an unexpected exception.");
-            return exc;
+            return;
         }
 
         this.content = readLines(readFile);
 
-        return null;
+        //return null;
 
     }
 

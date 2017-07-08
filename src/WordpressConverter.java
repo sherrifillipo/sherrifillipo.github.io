@@ -41,14 +41,14 @@ public class WordpressConverter {
      * Abstracts the conversion of a file to a String representation
      * @return
      */
-    public boolean fileToString(){
-
-        fh = new FileHandler(this.filename);
-        fileContent = fh.getContent();
-
-        return true;
-
-    }
+//    public boolean fileToString(){
+//
+//        fh = new FileHandler(this.filename);
+//        fileContent = fh.getContent();
+//
+//        return true;
+//
+//    }
 
     /**
      * Convert XML uses a string representation of an XML file and converts it into HTML formatted text
@@ -91,5 +91,7 @@ public class WordpressConverter {
 
 
         }
+
+        return true;
     }
 }
