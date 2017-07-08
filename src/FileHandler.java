@@ -8,30 +8,30 @@ import java.util.Scanner;
 public class FileHandler {
 
     private String filename;
+    private String[] content;
     private File local;
-    private String content;
-    private boolean checked;
 
 
     /**
      * Constructor for the FileHandler, takes no arguments
      */
-    public FileHandler(){
-        checked = false;
-    }
+    public FileHandler(){}
 
     /**
      * Constructor for the FileHandler
-     * Constructor takes a single String argument for the file name
+     * Constructor takes a single String argument for the file name and automatically executes
      * @param filename
      */
     public FileHandler(String filename){
         this.filename = filename;
-        checked = false;
-        validateFile();
+        parseXMLtoHTML();
     }
 
-    public boolean validateFile(){
+    /**
+     * Checks the file for appropriate formatting
+     * @return non-null Exception if an error is encountered during parsing
+     */
+    public Exception parseXMLtoHTML(){
 
         local = new File(filename);
         Scanner readFile;
@@ -40,29 +40,57 @@ public class FileHandler {
             readFile = new Scanner(local);
         } catch(FileNotFoundException fnfe){
             System.out.println("Provided filename does not exist.");
-            return false;
+            return fnfe;
         } catch(Exception exc){
             System.out.println("Encountered an unexpected exception.");
-            return false;
+            return exc;
         }
 
-        //contentBuff = new StringBuffer();
+        this.content = readLines(readFile);
 
-        while(readFile.hasNextLine()){
-            content = content + readFile.nextLine();
-            //contentBuff.append(readFile.nextLine());
+        return null;
+
+    }
+
+    /**
+     * Counts the number of lines in the HTML file
+     * @param using Scanner object with a File already entered as the readable object
+     * @return int value for the number of lines in the file
+     */
+    public int countLines(Scanner using){
+
+        if (using == null) {
+            return 0;
         }
 
-        checked = true;
+        int lineCount = 0;
 
-        return true;
+        while(using.hasNextLine()){
+            lineCount++;
+        }
+
+        return lineCount;
     }
 
     /**
      * Returns the parsed contents of the
      * @return String single String content of the parsed file
      */
-    public String getContent(){
+    public String[] readLines(Scanner using){
+
+        String[] txt = new String[countLines(using)];
+        int pos = 0;
+
+        while(using.hasNext()){
+            txt[pos] = using.nextLine();
+            pos++;
+        }
+
+        return txt;
+
+    }
+
+    public String[] getContent(){
         return content;
     }
 
