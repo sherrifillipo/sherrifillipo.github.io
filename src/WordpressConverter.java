@@ -66,7 +66,6 @@ public class WordpressConverter {
         for(int c = 0; c < fileContent.length(); c++){
 
 
-
         }
 
         int posStart = 0;
