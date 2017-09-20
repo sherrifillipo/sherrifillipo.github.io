@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 /**
  * Created by briansokas on 6/30/17.
+ *
+ * The FileHandler class is a generic file handler, which contains methods that will parse files
+ * Different methods are available depending on the type of file
  */
 public class FileHandler {
 
