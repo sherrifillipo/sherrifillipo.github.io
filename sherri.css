@@ -14,3 +14,10 @@ p {
   white-space: pre-wrap;
   text-align: left;
 }
+
+li{
+  color: #black;
+  font-family: "Avenir", sans-serif;
+  white-space: pre-wrap;
+  text-align: left;
+}
