@@ -24,6 +24,7 @@ li{
 
 ul{
   color: #black;
+  margin: 0;
   display: flex;
   font-family: "Avenir", sans-serif;
   white-space: normal;
