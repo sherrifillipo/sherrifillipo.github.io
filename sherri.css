@@ -24,7 +24,7 @@ li{
 
 ul{
   color: #black;
-  display: flex;
+  /* display: flex; */
   font-family: "Avenir", sans-serif;
   white-space: normal;
   text-align: left;
@@ -33,7 +33,7 @@ ul{
 ol{
   color: #black;
   font-family: "Avenir", sans-serif;
-  /* white-space: pre-wrap; */
+  white-space: pre-wrap;
   display: flex;
   text-align: left;
 }
