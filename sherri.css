@@ -21,6 +21,7 @@ li{
   white-space: normal;
   text-align: left;
   float: none;
+  display: block;
 }
 
 ul{
@@ -35,6 +36,5 @@ ol{
   color: #black;
   font-family: "Avenir", sans-serif;
   white-space: pre-wrap;
-  display: flex;
   text-align: left;
 }
