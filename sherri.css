@@ -21,3 +21,17 @@ li{
   white-space: pre-wrap;
   text-align: left;
 }
+
+ul{
+  color: #black;
+  font-family: "Avenir", sans-serif;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+ol{
+  color: #black;
+  font-family: "Avenir", sans-serif;
+  white-space: pre-wrap;
+  text-align: left;
+}
