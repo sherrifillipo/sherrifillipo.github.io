@@ -21,7 +21,6 @@ li{
   white-space: normal;
   text-align: left;
   float: none;
-  display: block;
 }
 
 ul{
@@ -30,6 +29,8 @@ ul{
   white-space: normal;
   text-align: left;
   float: none;
+  display: block;
+
 }
 
 ol{
