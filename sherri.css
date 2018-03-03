@@ -24,10 +24,10 @@ li{
 
 ul{
   color: #black;
-  /* display: flex; */
   font-family: "Avenir", sans-serif;
   white-space: normal;
   text-align: left;
+  float: none;
 }
 
 ol{
