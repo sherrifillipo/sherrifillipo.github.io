@@ -94,15 +94,15 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="posts/2014/2014_landing.html">2014</a>
+                            <a href="2014_landing.html">2014</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="posts/2015/2015_landing.html">2015</a>
+                            <a href="../2015/2015_landing.html">2015</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <a href="posts/2016/2016_landing.html">2016</a>
+                            <a href="../2016/2016_landing.html">2016</a>
                         </li>
                     </ul>
                 </li>
@@ -118,24 +118,22 @@
     <div class="sidenav">
         <a class="title" align="center">2014 Blogs</a>
         <a href="#" onclick="load_page('sep')">September</a>
-        <a href="oct.html" onclick="load_page('oct.html')">October</a>
-        <a href="nov.html" onclick="load_page('nov.html')">November</a>
-        <a href="dec.html" onclick="load_page('dec.html')">December</a>
+        <a href="#" onclick="load_page('oct')">October</a>
+        <a href="#" onclick="load_page('nov')">November</a>
+        <a href="#" onclick="load_page('dec')">December</a>
     </div>
 
-
-    <div class="main" id="main_blog">
-        <h2>Hi there</h2>
-    </div>
+    <!-- Dynamic blog content -->
+    <div class="main" id="main_blog"></div>
 
     <!-- For loading content -->
     <script>
         function load_page(month) {
-            var link = document.querySelector('link[rel="' + month + '"]');
-            document.body.innerHTML = link.import.querySelector('html').innerHTML;
+            // var doc = document.querySelector('link[rel="' + month + '"]').import;
+            // var content = doc.querySelector('html');
+            document.getElementById("main_blog").innerHTML = "<h1>content</h1>";
         }
     </script>
-
 
 </body>
 
